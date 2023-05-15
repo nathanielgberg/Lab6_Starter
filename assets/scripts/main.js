@@ -105,6 +105,8 @@ function initFormHandler() {
   localStorage.clear();
   // B13. TODO - Delete the contents of <main>
   const mainElement = document.querySelector('main');
-  mainElement.innerHTML = '';
+  while (mainElement.firstChild) {
+    mainElement.removeChild(mainElement.firstChild);
+  }
  });
 }
